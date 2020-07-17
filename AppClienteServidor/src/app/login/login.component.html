@@ -1,0 +1,33 @@
+<html>
+    <head>
+
+    </head>
+    <body class="login">
+        <div class="login">
+            <h1>
+                Lista {{ tittle }}
+            </h1>
+        
+            <div *ngFor="let user of userArray">
+                <p>
+                    <img style="border-radius: 50%;" [src]='user.picture.thumbnail'>
+                    <br>
+                    Genero: {{user.gender}}
+                    <br>
+                    Name: {{user.name.first}}  {{user.name.last}}
+                    <br>
+                    Location: {{user.location.street.number}}  {{user.location.street.name}}
+                    <br>
+                    City: {{user.location.city}}
+                    <br>
+                    Postcode: {{user.location.postcode}}
+                    <b></b>
+                    Email: {{user.email}}
+                    <br>
+                    Phone: {{user.phone}} 
+                </p>
+                <br>
+            </div>
+        </div>
+    </body>
+</html>
